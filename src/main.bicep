@@ -53,12 +53,12 @@ module functionApp '../modules/function-app/main.bicep' = {
   dependsOn: [storageAccount, applicationInsights]
 }
 
-module apiManagementService '../modules/api-management/main.bicep' = {
-  name: 'api-management'
-  params: {
-    apiManagementServiceName: apiManagementServiceName
-    publisherEmail: publisherEmail
-    publisherName: publisherName
-    location: location
-  }
-}
+// module apiManagementService '../modules/api-management/main.bicep' = {
+//   name: 'api-management'
+//   params: {
+//     apiManagementServiceName: apiManagementServiceName
+//     publisherEmail: publisherEmail
+//     publisherName: publisherName
+//     location: location
+//   }
+// }
