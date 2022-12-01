@@ -50,6 +50,7 @@ module functionApp '../modules/function-app/main.bicep' = {
     appInsightsInstrumentationKey: applicationInsights.outputs.appInsightsInstrumentationKey
     storageAccountName: storageAccountName
   }
+  dependsOn: [storageAccount, applicationInsights]
 }
 
 module apiManagementService '../modules/api-management/main.bicep' = {
